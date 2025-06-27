@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const creditCardSchema = new mongoose.Schema({
   ccNumber: {
@@ -20,4 +20,6 @@ const creditCardSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("CreditCard", creditCardSchema);
+const CreditCard = mongoose.model("CreditCard", creditCardSchema);
+
+export default CreditCard;
